@@ -32,6 +32,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="GxK-gr-Wg4" secondAttribute="bottom" constant="8" id="RPU-iw-hEK"/>
+                                            <constraint firstItem="GxK-gr-Wg4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ahw-BS-zqY" secondAttribute="leading" constant="20" symbolic="YES" id="S8T-zS-5om"/>
                                             <constraint firstAttribute="trailing" secondItem="GxK-gr-Wg4" secondAttribute="trailing" constant="8" id="tlK-1F-3GQ"/>
                                         </constraints>
                                     </view>
@@ -61,7 +62,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="+/-"/>
                                                                 <connections>
-                                                                    <action selector="actionButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gZH-gE-wda"/>
+                                                                    <action selector="reverseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGg-XW-pYr"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMC-g3-z5i">
@@ -79,7 +80,7 @@
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title="+"/>
+                                                                <state key="normal" title="/"/>
                                                                 <connections>
                                                                     <action selector="actionButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YyJ-iz-Tqh"/>
                                                                 </connections>
@@ -250,6 +251,9 @@
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="="/>
+                                                                <connections>
+                                                                    <action selector="totalButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ink-IY-3C9"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -285,14 +289,8 @@
                     </view>
                     <connections>
                         <outlet property="clearButton" destination="rmt-Y3-Aif" id="0h9-qo-ivd"/>
-                        <outlet property="interestButton" destination="nMC-g3-z5i" id="Occ-QJ-pRk"/>
-                        <outlet property="minusButton" destination="c7A-OX-dCN" id="YPG-IG-Mor"/>
-                        <outlet property="multiolicationButton" destination="bD6-Vt-lNg" id="aH5-SN-iyR"/>
                         <outlet property="resultLabel" destination="GxK-gr-Wg4" id="lmK-W2-PjW"/>
-                        <outlet property="reverseButton" destination="uLc-go-igx" id="tBN-J1-ls9"/>
                         <outlet property="totalButton" destination="v53-xL-pLE" id="ujP-gy-VMW"/>
-                        <outletCollection property="plusButtons" destination="OKB-Ir-nGt" collectionClass="NSMutableArray" id="LZ0-ei-0KW"/>
-                        <outletCollection property="plusButtons" destination="Rfa-fz-TTF" collectionClass="NSMutableArray" id="Eni-v6-Z0t"/>
                         <outletCollection property="numbersButtons" destination="3G5-eD-utf" collectionClass="NSMutableArray" id="FeS-hz-b4R"/>
                         <outletCollection property="numbersButtons" destination="MB1-CX-bLa" collectionClass="NSMutableArray" id="ccY-sw-0sW"/>
                         <outletCollection property="numbersButtons" destination="Sch-Aw-6us" collectionClass="NSMutableArray" id="lft-kw-Smo"/>
@@ -304,7 +302,6 @@
                         <outletCollection property="numbersButtons" destination="cDV-lG-wpS" collectionClass="NSMutableArray" id="YuR-b5-PDF"/>
                         <outletCollection property="numbersButtons" destination="LsA-CF-CJH" collectionClass="NSMutableArray" id="gcI-Kk-xPy"/>
                         <outletCollection property="numbersButtons" destination="VRP-Vy-mCX" collectionClass="NSMutableArray" id="p8B-6g-AXk"/>
-                        <outletCollection property="actionButtons" destination="uLc-go-igx" collectionClass="NSMutableArray" id="v5Q-rE-8FB"/>
                         <outletCollection property="actionButtons" destination="nMC-g3-z5i" collectionClass="NSMutableArray" id="Pf3-oW-YVe"/>
                         <outletCollection property="actionButtons" destination="OKB-Ir-nGt" collectionClass="NSMutableArray" id="RlM-0d-Sg1"/>
                         <outletCollection property="actionButtons" destination="bD6-Vt-lNg" collectionClass="NSMutableArray" id="OZP-L3-QpO"/>
@@ -314,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+            <point key="canvasLocation" x="114" y="158"/>
         </scene>
     </scenes>
     <resources>
